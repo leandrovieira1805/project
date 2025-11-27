@@ -9,12 +9,12 @@ export default function Header() {
   return (
     <header className="bg-black text-white sticky top-0 z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-3">
+        <div className="flex justify-between items-center py-2 sm:py-3">
           <div className="flex items-center">
             <img
               src="/WhatsApp_Image_2025-11-26_at_06.44.43-removebg-preview.png"
               alt="Leandro IPTV Logo"
-              className="h-18 sm:h-20 w-auto drop-shadow-xl"
+              className="hidden sm:block h-16 md:h-20 w-auto drop-shadow-xl"
             />
           </div>
 

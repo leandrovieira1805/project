@@ -46,6 +46,7 @@ export default function Hero() {
           backgroundImage: "url('/hero-iptv-bg.jpg')"
         }}
       />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
         <div className="text-center">

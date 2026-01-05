@@ -123,6 +123,7 @@ export default function Plans() {
   const [mobileOS, setMobileOS] = useState<MobileOS | null>(null);
   const [tvBrand, setTvBrand] = useState('');
   const [tvType, setTvType] = useState<TvType | null>(null);
+  const [referral, setReferral] = useState('João Henrique');
 
   const resetModal = () => {
     setName('');
@@ -152,13 +153,14 @@ export default function Plans() {
     if (!selectedPlan) return;
     const base = `Olá! Tenho interesse no ${selectedPlan.name} por R$ ${selectedPlan.price} / ${selectedPlan.period}.`;
     const identity = ` Nome: ${name}. Email: ${email}.`;
+    const referralInfo = referral ? ` Indicação: ${referral}.` : '';
     let deviceInfo = '';
     if (deviceType === 'celular') {
       deviceInfo = ` Dispositivo: Celular${mobileOS ? ` (${mobileOS})` : ''}.`;
     } else if (deviceType === 'tv') {
       deviceInfo = ` Dispositivo: TV${tvType ? ` (${tvType})` : ''}${tvBrand ? `, Marca: ${tvBrand}` : ''}.`;
     }
-    const message = encodeURIComponent(base + identity + deviceInfo);
+    const message = encodeURIComponent(base + identity + referralInfo + deviceInfo);
     const link = `https://wa.me/${phone}?text=${message}`;
     window.open(link, '_blank');
     closeModal();
@@ -202,6 +204,16 @@ export default function Plans() {
                   type="email"
                   className="w-full px-3 py-2 rounded-lg border border-gray-300 text-black placeholder-gray-500"
                 />
+                <div className="flex flex-col">
+                  <label className="font-semibold text-gray-800 mb-1">Indicação</label>
+                  <select
+                    value={referral}
+                    onChange={(e) => setReferral(e.target.value)}
+                    className="w-full px-3 py-2 rounded-lg border border-gray-300 text-black"
+                  >
+                    <option value="João Henrique">João Henrique</option>
+                  </select>
+                </div>
               </div>
               <p className="font-semibold text-gray-800">Dispositivo</p>
               <div className="mt-2 flex gap-2">

@@ -51,7 +51,7 @@ export default function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
         <div className="text-center">
           <img
-            src="/flow-tv-logo.jpeg"
+            src="/WhatsApp_Image_2026-01-05_at_09.57.01-removebg-preview.png"
             alt="Flow TV Logo"
             className="mx-auto mb-6 h-24 sm:h-32 lg:h-40 w-auto drop-shadow-2xl"
           />

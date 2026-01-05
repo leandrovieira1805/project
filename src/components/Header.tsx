@@ -12,7 +12,7 @@ export default function Header() {
         <div className="flex justify-between items-center py-2 sm:py-3">
           <div className="flex items-center">
             <img
-              src="/flow-tv-logo.jpeg"
+              src="/WhatsApp_Image_2026-01-05_at_09.57.01-removebg-preview.png"
               alt="Flow TV Logo"
               className="hidden sm:block h-16 md:h-20 w-auto drop-shadow-xl"
             />

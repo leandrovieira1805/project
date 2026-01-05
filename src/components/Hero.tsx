@@ -10,7 +10,8 @@ export default function Hero() {
   const [mobileOS, setMobileOS] = useState<'Android' | 'iOS' | null>(null);
   const [tvBrand, setTvBrand] = useState('');
   const [tvType, setTvType] = useState<'Smart' | 'Android' | null>(null);
-  const [referral, setReferral] = useState('João Henrique');
+  const [referralEnabled, setReferralEnabled] = useState<boolean | null>(null);
+  const [referralName, setReferralName] = useState('');
   const canSubmit = () => {
     if (!name.trim() || !email.trim()) return false;
     if (!deviceType) return false;
@@ -21,7 +22,7 @@ export default function Hero() {
   const submitTrial = () => {
     const base = 'Olá! Gostaria de fazer TESTE GRÁTIS.';
     const identity = ` Nome: ${name}. Email: ${email}.`;
-    const referralInfo = referral ? ` Indicação: ${referral}.` : '';
+    const referralInfo = referralEnabled && referralName.trim() ? ` Indicação: ${referralName.trim()}.` : '';
     let deviceInfo = '';
     if (deviceType === 'celular') {
       deviceInfo = ` Dispositivo: Celular${mobileOS ? ` (${mobileOS})` : ''}.`;
@@ -107,13 +108,30 @@ export default function Hero() {
               />
               <div className="flex flex-col">
                 <label className="font-semibold text-gray-800 mb-1">Indicação</label>
-                <select
-                  value={referral}
-                  onChange={(e) => setReferral(e.target.value)}
-                  className="w-full px-3 py-2 rounded-lg border border-gray-300 text-black"
-                >
-                  <option value="João Henrique">João Henrique</option>
-                </select>
+                <div className="flex gap-2 mb-2">
+                  <button
+                    type="button"
+                    onClick={() => setReferralEnabled(true)}
+                    className={`px-3 py-2 rounded-lg border ${referralEnabled === true ? 'bg-green-600 text-white border-green-600' : 'border-gray-300 text-black'}`}
+                  >
+                    Sim
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => { setReferralEnabled(false); setReferralName(''); }}
+                    className={`px-3 py-2 rounded-lg border ${referralEnabled === false ? 'bg-green-600 text-white border-green-600' : 'border-gray-300 text-black'}`}
+                  >
+                    Não
+                  </button>
+                </div>
+                {referralEnabled === true && (
+                  <input
+                    value={referralName}
+                    onChange={(e) => setReferralName(e.target.value)}
+                    placeholder="Nome de quem indicou"
+                    className="w-full px-3 py-2 rounded-lg border border-gray-300 text-black placeholder-gray-500"
+                  />
+                )}
               </div>
             </div>
             <p className="font-semibold text-gray-800">Dispositivo</p>

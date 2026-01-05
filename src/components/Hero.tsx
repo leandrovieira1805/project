@@ -75,6 +75,7 @@ export default function Hero() {
 
             <a
               href="#planos"
+              translate="no"
               className="bg-white text-black hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition transform hover:scale-105 shadow-lg w-full sm:w-auto"
             >
               Ver Planos

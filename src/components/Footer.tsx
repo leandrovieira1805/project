@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="mb-6">
               <img
-                src="/flow-tv-logo.png"
+                src="/flow-tv-logo.jpeg"
                 alt="Flow TV Logo"
                 className="h-18 sm:h-20 w-auto mb-4 drop-shadow-xl"
               />

@@ -39,7 +39,7 @@ export default function Benefits() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-black mb-4">
-            Por que escolher a <span className="text-green-500">Leandro IPTV</span>?
+            Por que escolher a <span className="text-green-500">Flow TV</span>?
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Oferecemos a melhor experiência em streaming de TV ao vivo

@@ -11,8 +11,8 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="mb-6">
               <img
-                src="/WhatsApp_Image_2025-11-26_at_06.44.43-removebg-preview.png"
-                alt="Leandro IPTV Logo"
+                src="/flow-tv-logo.png"
+                alt="Flow TV Logo"
                 className="h-18 sm:h-20 w-auto mb-4 drop-shadow-xl"
               />
             </div>
@@ -80,7 +80,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center">
           <p className="text-gray-400">
-            © {currentYear} Leandro IPTV Internet Ilimitada. Todos os direitos reservados.
+            © {currentYear} Flow TV Internet Ilimitada. Todos os direitos reservados.
           </p>
           <p className="text-gray-500 text-sm mt-2">
             Suporte disponível 24 horas por dia, 7 dias por semana.

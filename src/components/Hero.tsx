@@ -51,12 +51,12 @@ export default function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
         <div className="text-center">
           <img
-            src="/WhatsApp_Image_2025-11-26_at_06.44.43-removebg-preview.png"
-            alt="Leandro IPTV Logo"
+            src="/flow-tv-logo.png"
+            alt="Flow TV Logo"
             className="mx-auto mb-6 h-24 sm:h-32 lg:h-40 w-auto drop-shadow-2xl"
           />
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 leading-tight">
-            Bem-vindo à <span className="text-green-400">Leandro IPTV</span>
+            Bem-vindo à <span className="text-green-400">Flow TV</span>
           </h1>
 
           <p className="text-lg sm:text-xl lg:text-2xl mb-10 text-gray-300 max-w-3xl mx-auto">
